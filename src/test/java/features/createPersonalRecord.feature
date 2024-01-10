@@ -1,4 +1,6 @@
-Feature: Execute API Requests
+Feature: Validate Post request
+
+
 
 
 @All @PostRequest
@@ -7,3 +9,4 @@ Scenario: Create book record
   When user call the api with POST request
   Then user will get success response with status code 201
   And all the required details are present in response body
+

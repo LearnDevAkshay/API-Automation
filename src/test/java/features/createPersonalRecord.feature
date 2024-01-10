@@ -1,6 +1,7 @@
 Feature: Execute API Requests
 
 
+@PostRequest
 Scenario: Create book record
   Given Add payload
   When user call the api with POST request

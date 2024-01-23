@@ -1,36 +1,36 @@
 package stepDefinition;
 
 
-import Request.request;
+import Request.Request;
 
-import RequestBuilder.testDataBuilder;
+import RequestBuilder.TestDataBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import pojo.personalRecord;
+import pojo.PersonalRecord;
 
-public class createPersonalRecordStepDef {
+public class CreatePersonalRecordStepDef {
 
-    public personalRecord pr ;
+    public PersonalRecord pr ;
 
-    public request rq;
+    public Request rq;
 
     public Response rs;
 
     @Given("Add payload")
     public void add_payload() {
 
-       testDataBuilder prB = new testDataBuilder();
+       TestDataBuilder prB = new TestDataBuilder();
 
        pr =  prB.generateBody() ;
 
     }
     @When("user call the api with POST request")
     public void user_call_the_api_with_post_request() throws JsonProcessingException {
-        rq = new request();
+        rq = new Request();
         rs = rq.postMethod(pr);
     }
     @Then("user will get success response with status code {int}")

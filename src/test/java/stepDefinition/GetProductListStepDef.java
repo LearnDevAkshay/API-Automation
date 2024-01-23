@@ -3,7 +3,7 @@ package stepDefinition;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class getProductListStepDef {
+public class GetProductListStepDef {
 
 
 

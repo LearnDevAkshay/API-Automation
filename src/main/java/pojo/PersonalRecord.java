@@ -1,6 +1,6 @@
 package pojo;
 
-public class personalRecord {
+public class PersonalRecord {
 
     private String name ;
     private String job ;
